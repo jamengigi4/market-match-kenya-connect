@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+🌾 Market Match – The Smart Marketplace for Kenyan Farmers
+Overview
+Market Match is an AI-powered, location-aware agritech platform revolutionizing how Kenyan smallholder farmers access market information. By bridging the gap between producers and verified buyers, Market Match digitizes the agricultural supply chain, helping farmers earn more and reduce post-harvest losses.
 
-## Project info
+🚜 Problem
+70% of Kenyans depend on agriculture, yet 6.4M+ smallholder farmers lack access to real-time price updates and verified buyers.
 
-**URL**: https://lovable.dev/projects/49f5949a-b7d9-4cde-b80e-8dec6baacf26
+Over 40% of produce is lost due to post-harvest waste and middlemen exploitation.
 
-## How can I edit this code?
+Kenya loses over Ksh 150 billion annually from inefficient supply chains.
 
-There are several ways of editing your application.
+💡 Our Solution
+Market Match provides:
 
-**Use Lovable**
+Real-time, region-specific crop price alerts via SMS & Web
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/49f5949a-b7d9-4cde-b80e-8dec6baacf26) and start prompting.
+A network of verified buyers for direct produce sales
 
-Changes made via Lovable will be committed automatically to this repo.
+A simple, multilingual platform accessible via 2G phones
 
-**Use your preferred IDE**
+A market trends dashboard for data-driven decisions
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🌍 Target Market
+85% of smallholder farmers in Kenya use mobile phones.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+98% mobile penetration offers massive potential for digital tools.
 
-Follow these steps:
+Designed for rural and urban farmers, cooperatives, and agri-entrepreneurs.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🎯 Goals
+Empower 6.4M+ farmers across Kenya.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Reduce post-harvest losses by 40%.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Expand across East Africa by 2030.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🔧 Key Features
+📈 Real-Time Price Alerts
 
-**Edit a file directly in GitHub**
+✅ Verified Buyer Matchmaking
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📊 Market Demand & Trends Dashboard
 
-**Use GitHub Codespaces**
+🌐 Multilingual UI & SMS fallback
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📲 WhatsApp & Google Form Integration
 
-## What technologies are used for this project?
+🔐 Tech Stack
+Frontend: HTML/CSS, Tailwind
 
-This project is built with:
+Backend: Python/Django (planned)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Database: MySQL (planned)
 
-## How can I deploy this project?
+Communication: Twilio for SMS, WhatsApp API
 
-Simply open [Lovable](https://lovable.dev/projects/49f5949a-b7d9-4cde-b80e-8dec6baacf26) and click on Share -> Publish.
+💼 Business Model
+Freemium model for farmers
 
-## Can I connect a custom domain to my Lovable project?
+Subscription packages for buyers
 
-Yes, you can!
+Data analytics for insurance/export partners
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+NGO and county partnerships for scale
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+💰 Funding Ask
+We are seeking 500,000,000 kes to:
+
+Build our MVP
+
+Run pilot projects in 3 counties
+
+Onboard 10,000+ farmers and 500+ buyers
+
+🤝 Team
+Felix M. Muriuki – Project Lead & Agritech Visionary
+
+Amos Kiplagat – AI & Software Innovator
+
+Nancy Karimi – UX/UI Designer & User Advocate
+
+📞 Contact
+📧 Email: trackandpinit@gmail.com
+📱 Phone: +254 710 654 707
+🌐 Website: https://agritechteaminnovators.netlify.app
+
+
+  
+Prompt Used to Build the Market Match Project
+“Create a professional, responsive, and visually engaging website for Market Match a smart agritech marketplace designed to empower Kenyan smallholder farmers. The site should reflect a clean, modern, and corporate look with colors that convey trust, professionalism, and digital innovation (avoid green). The homepage must feature a compelling project story, clearly communicating its impact, mission, and value to farmers, buyers, and partners.
+
+Key sections include:
+
+A powerful hero section with tagline and call-to-action
+
+A brief problem statement with statistics on losses and inefficiencies
+
+Our AI-driven solution overview (real-time price alerts, verified buyer matching, multilingual access)
+
+Core features with iconography (SMS alerts, geo-based tracking, offline support)
+
+Market traction and real testimonials (optional for future phase)
+
+A team showcase (Felix M. Muriuki, Amos Kiplagat, Nancy Karimi)
+
+A clear contact section and a footer with links to social media
+
+Make sure all buttons are fully responsive, mobile-optimized, and work without fail. All elements must be aligned perfectly. Use professional fonts and visual hierarchy. The platform should evoke trust, innovation, and purpose targeting both rural farmers and investors. Ensure fast loading, smooth UX, and accessibility support for users with low bandwidth.”
+
