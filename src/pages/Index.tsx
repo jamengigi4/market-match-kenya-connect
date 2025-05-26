@@ -1,8 +1,8 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Users, TrendingUp, Shield, Globe, BarChart3, Zap, Award } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, Shield, Globe, BarChart3, Zap, Award, Bell, UserCheck, MessageSquare, Brain } from 'lucide-react';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -99,92 +99,152 @@ const Index = () => {
     }
   ];
 
-  const features = [
+  const howItWorks = [
     {
-      icon: <BarChart3 className="w-10 h-10 text-corporate-gold" />,
-      title: "Real-Time Market Intelligence",
-      description: "Advanced analytics and verified market data delivered instantly via SMS and web platforms"
+      icon: <Bell className="w-10 h-10 text-corporate-gold" />,
+      title: "Real-Time Alerts",
+      description: "Stay updated with accurate, regional price info delivered instantly to your phone"
     },
     {
-      icon: <Users className="w-10 h-10 text-corporate-gold" />,
-      title: "Direct Buyer Network",
-      description: "Connect with verified buyers, exporters, and institutional purchasers through our premium platform"
+      icon: <UserCheck className="w-10 h-10 text-corporate-gold" />,
+      title: "Verified Buyers",
+      description: "Connect with trustworthy buyers directly - no middlemen taking your profits"
     },
     {
-      icon: <Shield className="w-10 h-10 text-corporate-gold" />,
-      title: "Verified Transactions",
-      description: "Enterprise-grade security with rated and verified buyers ensuring reliable, fair-priced transactions"
+      icon: <MessageSquare className="w-10 h-10 text-corporate-gold" />,
+      title: "Easy Access",
+      description: "Multilingual, SMS-based platform that works even on basic phones"
     },
     {
-      icon: <Globe className="w-10 h-10 text-corporate-gold" />,
-      title: "Multilingual Platform",
-      description: "Seamless access in English, Swahili, and local dialects with AI-powered communication tools"
+      icon: <Brain className="w-10 h-10 text-corporate-gold" />,
+      title: "AI Matching",
+      description: "Smart location and demand tracking for optimal sales opportunities"
     }
   ];
 
   const stats = [
-    { number: "6.4M+", label: "Farmers Reached", icon: <Users className="w-8 h-8" /> },
-    { number: "Ksh 150B+", label: "Waste Prevented", icon: <TrendingUp className="w-8 h-8" /> },
-    { number: "70%", label: "Price Improvement", icon: <BarChart3 className="w-8 h-8" /> },
-    { number: "24/7", label: "Market Access", icon: <Zap className="w-8 h-8" /> }
+    { number: "6.4M+", label: "Farmers Empowered" },
+    { number: "Ksh 150B+", label: "Annual Losses Reduced" },
+    { number: "98%", label: "Mobile Reach" },
+    { number: "40%+", label: "Loss Reduction Potential" }
   ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/788e8564-4d22-4aa5-ac63-279c7d1961d6.png" 
+                alt="Agritech Team Innovators" 
+                className="h-10 w-auto"
+              />
+              <span className="text-xl font-bold text-corporate-navy">Market Match</span>
+            </div>
+            
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <button onClick={() => scrollToSection('home')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">About</button>
+              <button onClick={() => scrollToSection('features')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">Features</button>
+              <button onClick={() => scrollToSection('farmers')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">Farmers</button>
+              <button onClick={() => scrollToSection('buyers')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">Buyers</button>
+              <button onClick={() => scrollToSection('contact')} className="text-corporate-navy hover:text-corporate-gold font-medium transition-colors">Contact</button>
+            </nav>
+
+            {/* CTA Button */}
+            <Button 
+              onClick={() => scrollToSection('register')}
+              className="corporate-gold-gradient text-corporate-navy font-semibold hover:shadow-lg transition-all"
+            >
+              Join Now
+            </Button>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden corporate-gradient min-h-screen flex items-center">
+      <section id="home" className="relative overflow-hidden corporate-gradient min-h-screen flex items-center pt-16">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-corporate-gold/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         </div>
         <div className="relative container mx-auto px-4 py-20">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto text-center">
             <div className="animate-fade-in">
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6">
-                <Award className="w-4 h-4 mr-2 text-corporate-gold" />
-                Billion-Shilling Agritech Platform
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Market 
-                <span className="block text-corporate-gold">Match</span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                Market Match — Empowering Kenyan Farmers to 
+                <span className="block text-corporate-gold">Sell Smarter, Earn Better, and Grow Faster</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-4 font-light">
-                Smart Harvest, Smart Sales
+              <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-light">
+                Digitizing Access to Markets for Every Kenyan Farmer with Real-Time Price Alerts, Verified Buyers & AI-Powered Matching
               </p>
-              <p className="text-lg text-white/80 mb-8 max-w-lg">
-                Enterprise-grade digital marketplace connecting 6.4M+ Kenyan farmers to verified buyers through AI-powered market intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button 
                   size="lg" 
                   className="corporate-gold-gradient text-corporate-navy font-semibold px-8 py-4 text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-                  onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => scrollToSection('register')}
                 >
-                  Get Started
+                  Join as a Farmer
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
                   className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg backdrop-blur-sm"
+                  onClick={() => scrollToSection('about')}
                 >
                   Learn More
                 </Button>
               </div>
             </div>
-            <div className="relative animate-slide-up">
-              <div className="glass-effect rounded-2xl p-8 text-white">
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="flex justify-center mb-3 text-corporate-gold">
-                        {stat.icon}
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Story Section */}
+      <section id="about" className="py-20 bg-corporate-light-gray">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-bold text-corporate-navy mb-8">
+                  From Farm to Market — Transforming Lives and Livelihoods
+                </h2>
+                <div className="prose prose-lg text-corporate-gray">
+                  <p className="mb-6">
+                    Meet Jane from Kisumu, a smallholder farmer who once struggled to sell her cabbage at a fair price. She spent days chasing middlemen who offered unfair rates, losing much of her hard work to spoilage and waste.
+                  </p>
+                  <p className="mb-6">
+                    Today, thanks to Market Match, Jane receives real-time market prices right on her phone, connects with verified buyers nearby, and plans her harvest knowing exactly where to sell.
+                  </p>
+                  <p className="mb-6">
+                    Market Match is not just a tech platform—it's a movement restoring dignity, trust, and prosperity to over 6 million Kenyan farmers. By bridging the gap between farms and markets with cutting-edge AI and accessible technology, we reduce losses by up to 40% and empower farmers like Jane to thrive.
+                  </p>
+                  <p className="font-semibold text-corporate-navy">
+                    Join us as we revolutionize agriculture in Kenya, one farmer at a time.
+                  </p>
+                </div>
+              </div>
+              <div className="relative animate-slide-up">
+                <div className="glass-effect rounded-2xl p-8 bg-white/90">
+                  <div className="grid grid-cols-2 gap-6">
+                    {stats.map((stat, index) => (
+                      <div key={index} className="text-center">
+                        <div className="text-3xl md:text-4xl font-bold text-corporate-navy mb-2">{stat.number}</div>
+                        <div className="text-sm text-corporate-gray">{stat.label}</div>
                       </div>
-                      <div className="text-2xl md:text-3xl font-bold mb-1">{stat.number}</div>
-                      <div className="text-sm text-white/70">{stat.label}</div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,91 +252,20 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem & Solution Section */}
-      <section className="py-20 bg-corporate-light-gray">
+      {/* How It Works Section */}
+      <section id="features" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-corporate-navy mb-6">
-                Transforming Agricultural Markets
+                How It Works
               </h2>
               <p className="text-xl text-corporate-gray max-w-3xl mx-auto">
-                Addressing Kenya's Ksh 150B+ annual post-harvest losses through intelligent market connections
-              </p>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-12">
-              <Card className="hover-lift border-0 shadow-xl bg-white">
-                <CardContent className="p-8">
-                  <div className="text-red-600 mb-4">
-                    <TrendingUp className="w-12 h-12" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-corporate-navy mb-6">Current Crisis</h3>
-                  <ul className="space-y-4 text-corporate-gray">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>70%+ of produce sold to exploitative middlemen at below-market rates</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Ksh 150B+ lost annually to post-harvest waste and poor pricing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Limited access to real-time market intelligence and buyer networks</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>6.4M+ smallholder farmers struggling with market access</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="hover-lift border-0 shadow-xl bg-gradient-to-br from-corporate-navy to-corporate-blue text-white">
-                <CardContent className="p-8">
-                  <div className="text-corporate-gold mb-4">
-                    <Shield className="w-12 h-12" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-6">Our Innovation</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-corporate-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>AI-powered market matching with predictive analytics</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-corporate-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Real-time price intelligence via SMS and web platforms</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-corporate-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Verified enterprise buyer network with transaction security</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-corporate-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Multilingual platform supporting local dialects</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-corporate-navy mb-6">
-                Platform Capabilities
-              </h2>
-              <p className="text-xl text-corporate-gray max-w-3xl mx-auto">
-                Enterprise-grade features designed for scalable agricultural transformation
+                Simple, powerful tools designed to transform how Kenyan farmers access markets
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {howItWorks.map((feature, index) => (
                 <Card key={index} className="hover-lift border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
                   <CardContent className="p-8 text-center h-full">
                     <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -302,10 +291,10 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Join the Revolution
+                Ready to sell smarter and grow your farm?
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Register now for exclusive access to Kenya's most advanced agricultural marketplace
+                Join Market Match today and transform your farming business
               </p>
             </div>
             <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -334,11 +323,11 @@ const Index = () => {
               </Card>
 
               {/* WhatsApp Registration */}
-              <Card className="border-0 shadow-2xl">
+              <Card className="border-0 shadow-2xl" id="farmers">
                 <CardContent className="p-0">
-                  <div className="bg-gradient-to-r from-green-600 to-green-500 p-6">
-                    <h3 className="text-2xl font-bold text-white text-center">
-                      Quick WhatsApp Access
+                  <div className="bg-gradient-to-r from-corporate-gold to-yellow-400 p-6">
+                    <h3 className="text-2xl font-bold text-corporate-navy text-center">
+                      Register Now on WhatsApp
                     </h3>
                   </div>
                   <div className="p-6 space-y-6">
@@ -419,7 +408,7 @@ const Index = () => {
                       disabled={!isFormValid()}
                       className="w-full corporate-gold-gradient text-corporate-navy py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-xl transition-all duration-300"
                     >
-                      📱 Connect on WhatsApp
+                      📱 Register Now on WhatsApp
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                     <p className="text-sm text-corporate-gray text-center">
@@ -434,7 +423,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-corporate-light-gray">
+      <section id="buyers" className="py-20 bg-corporate-light-gray">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -552,28 +541,35 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="corporate-gradient text-white py-16">
+      <footer id="contact" className="corporate-gradient text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="md:col-span-2">
-                <h3 className="text-3xl font-bold mb-4">Market Match</h3>
+                <div className="flex items-center space-x-3 mb-4">
+                  <img 
+                    src="/lovable-uploads/788e8564-4d22-4aa5-ac63-279c7d1961d6.png" 
+                    alt="Agritech Team Innovators" 
+                    className="h-12 w-auto"
+                  />
+                  <h3 className="text-3xl font-bold">Market Match</h3>
+                </div>
                 <p className="text-xl text-white/80 mb-6">Digitize. Connect. Prosper.</p>
                 <p className="text-white/70 leading-relaxed">
                   Kenya's premier agricultural marketplace connecting farmers to verified buyers through intelligent technology solutions.
                 </p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-4">Platform</h4>
+                <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-white/70">
-                  <li>Market Intelligence</li>
-                  <li>Buyer Network</li>
-                  <li>Price Analytics</li>
-                  <li>Mobile Access</li>
+                  <li><button onClick={() => scrollToSection('home')} className="hover:text-white transition-colors">Home</button></li>
+                  <li><button onClick={() => scrollToSection('about')} className="hover:text-white transition-colors">About</button></li>
+                  <li><button onClick={() => scrollToSection('features')} className="hover:text-white transition-colors">Features</button></li>
+                  <li><button onClick={() => scrollToSection('register')} className="hover:text-white transition-colors">Register</button></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-4">Contact</h4>
+                <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
                 <div className="space-y-2 text-white/70">
                   <p>WhatsApp: +254710654707</p>
                   <p>Email: info@marketmatch.ke</p>
