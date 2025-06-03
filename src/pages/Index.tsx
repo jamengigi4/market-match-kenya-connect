@@ -1,12 +1,16 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Users, TrendingUp, Shield, Globe, BarChart3, Zap, Award, Bell, UserCheck, MessageSquare, Brain } from 'lucide-react';
 import AgriculturePricesCarousel from '@/components/AgriculturePricesCarousel';
 import PriceScrollBar from '@/components/PriceScrollBar';
+import ProtectedImage from '@/components/ProtectedImage';
+import { useImageProtection } from '@/hooks/useImageProtection';
 
 const Index = () => {
+  // Enable image protection globally
+  useImageProtection();
+
   const [formData, setFormData] = useState({
     fullName: '',
     county: '',
@@ -142,9 +146,9 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
+            {/* Logo - now using ProtectedImage */}
             <div className="flex items-center space-x-3">
-              <img 
+              <ProtectedImage 
                 src="/lovable-uploads/788e8564-4d22-4aa5-ac63-279c7d1961d6.png" 
                 alt="Agritech Team Innovators" 
                 className="h-10 w-auto"
@@ -465,7 +469,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section - Updated to use ProtectedImage */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -482,7 +486,7 @@ const Index = () => {
                 <Card key={index} className="hover-lift border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
                   <CardContent className="p-8 text-center">
                     <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-corporate-gold shadow-xl group-hover:scale-105 transition-transform duration-300">
-                      <img
+                      <ProtectedImage
                         src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover"
@@ -548,14 +552,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - Updated to use ProtectedImage */}
       <footer id="contact" className="corporate-gradient text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-3 mb-4">
-                  <img 
+                  <ProtectedImage 
                     src="/lovable-uploads/788e8564-4d22-4aa5-ac63-279c7d1961d6.png" 
                     alt="Agritech Team Innovators" 
                     className="h-12 w-auto"
