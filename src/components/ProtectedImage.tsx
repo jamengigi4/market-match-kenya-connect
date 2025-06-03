@@ -103,7 +103,7 @@ const ProtectedImage: React.FC<ProtectedImageProps> = ({
             WebkitTouchCallout: 'none',
             WebkitUserDrag: 'none',
             KhtmlUserSelect: 'none'
-          }}
+          } as React.CSSProperties}
         />
       )}
       {/* Invisible overlay to prevent right-click */}
