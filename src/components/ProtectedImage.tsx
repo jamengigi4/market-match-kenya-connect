@@ -64,17 +64,12 @@ const ProtectedImage: React.FC<ProtectedImageProps> = ({
   }, [src]);
 
   const handleContextMenu = (e: React.MouseEvent) => {
-    e.preventDefault(); // Disable right-click
+    e.preventDefault();
     return false;
   };
 
   const handleDragStart = (e: React.DragEvent) => {
-    e.preventDefault(); // Disable drag
-    return false;
-  };
-
-  const handleSelectStart = (e: React.SyntheticEvent) => {
-    e.preventDefault(); // Disable text selection
+    e.preventDefault();
     return false;
   };
 
@@ -94,7 +89,6 @@ const ProtectedImage: React.FC<ProtectedImageProps> = ({
           height={height}
           onContextMenu={handleContextMenu}
           onDragStart={handleDragStart}
-          onSelectStart={handleSelectStart}
           style={{
             userSelect: 'none',
             WebkitUserSelect: 'none',
