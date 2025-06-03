@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Users, TrendingUp, Shield, Globe, BarChart3, Zap, Award, Bell, UserCheck, MessageSquare, Brain } from 'lucide-react';
 import AgriculturePricesCarousel from '@/components/AgriculturePricesCarousel';
+import PriceScrollBar from '@/components/PriceScrollBar';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -181,6 +183,9 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-6xl mx-auto text-center">
             <div className="animate-fade-in">
+              {/* Price Scroll Bar - positioned directly above the main headline */}
+              <PriceScrollBar />
+              
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
                 Market Match — Empowering Kenyan Farmers to 
                 <span className="block text-corporate-gold">Sell Smarter, Earn Better, and Grow Faster</span>
