@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Users, TrendingUp, Shield, Globe, BarChart3, Zap, Award, Bell, UserCheck, MessageSquare, Brain } from 'lucide-react';
+import AgriculturePricesCarousel from '@/components/AgriculturePricesCarousel';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -284,6 +284,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Agriculture Prices Carousel Section */}
+      <AgriculturePricesCarousel />
 
       {/* Registration Section */}
       <section className="py-20 bg-gradient-to-br from-corporate-navy via-corporate-blue to-corporate-navy" id="register">
